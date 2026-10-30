@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Study Guides | Seventh-day Adventist Church Maryland</title>
+    <link rel="stylesheet" href="resources.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="home.html">
+          <img src="logo.svg" alt="Church logo" />
+          <span>Seventh-day Adventist Church Maryland</span>
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="home.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="ministries.html">Ministries</a>
+          <a class="active" href="resources.html">Adventist Resources</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container hero-inner">
+          <div>
+            <p class="eyebrow">Sabbath School</p>
+            <h1>Study guides for every age.</h1>
+            <p class="quarter-label" id="current-quarter" aria-live="polite">Browse current-quarter lessons below.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container resources-grid">
+          <article class="resource-card">
+            <div class="resource-icon">K</div>
+            <h3>Kindergarten</h3>
+            <p>Bible lessons and activities for young children.</p>
+            <a class="resource-link" href="https://www.gracelink.net/kindergarten" target="_blank" rel="noreferrer">Open Kindergarten lessons</a>
+          </article>
+
+          <article class="resource-card">
+            <div class="resource-icon">1</div>
+            <h3>Primary 1</h3>
+            <p>Primary Sabbath School lessons for children ages 5-9.</p>
+            <a class="resource-link" href="https://www.gracelink.net/primary" target="_blank" rel="noreferrer">Open Primary lessons</a>
+          </article>
+
+          <article class="resource-card">
+            <div class="resource-icon">2</div>
+            <h3>Primary 2</h3>
+            <p>Primary Sabbath School lessons for children ages 5-9.</p>
+            <a class="resource-link" href="https://www.gracelink.net/primary" target="_blank" rel="noreferrer">Open Primary lessons</a>
+          </article>
+
+          <article class="resource-card">
+            <div class="resource-icon">P</div>
+            <h3>PowerPoint</h3>
+            <p>Junior PowerPoints Bible lessons for ages 10-12.</p>
+            <a class="resource-link" href="https://www.juniorpowerpoints.org/page2447" target="_blank" rel="noreferrer">Open PowerPoints lessons</a>
+          </article>
+
+          <article class="resource-card">
+            <div class="resource-icon">R</div>
+            <h3>RealTime Faith</h3>
+            <p>Sabbath School lessons for teens ages 13-14.</p>
+            <a class="resource-link" href="https://www.realtimefaith.net/page2566" target="_blank" rel="noreferrer">Open RealTime Faith lessons</a>
+          </article>
+
+          <article class="resource-card">
+            <div class="resource-icon">C</div>
+            <h3>Cornerstone Connections</h3>
+            <p>Weekly Sabbath School lessons for teens ages 15-18.</p>
+            <a class="resource-link" href="https://www.cornerstoneconnections.net/lessons" target="_blank" rel="noreferrer">Open Cornerstone lessons</a>
+          </article>
+
+          <article class="resource-card">
+            <div class="resource-icon">A</div>
+            <h3>Adult Lesson</h3>
+            <p>Current and past Adult Bible Study Guide lessons.</p>
+            <a class="resource-link" href="https://absg.sspmadventist.org/study" target="_blank" rel="noreferrer">Browse Adult lessons</a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© 2026 Seventh-day Adventist Church Maryland</p>
+        <p>Grounded in Scripture • Growing in faith</p>
+      </div>
+    </footer>
+  <script>
+    const currentDate = new Date();
+    const quarterNames = ["First", "Second", "Third", "Fourth"];
+    const quarterName = quarterNames[Math.floor(currentDate.getMonth() / 3)];
+    document.getElementById("current-quarter").textContent = `Current quarter: ${quarterName} Quarter ${currentDate.getFullYear()}`;
+  </script>
+  </body>
+</html>

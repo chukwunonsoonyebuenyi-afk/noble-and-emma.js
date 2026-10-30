@@ -1,0 +1,247 @@
+:root {
+  --green: #1fa347;
+  --dark: #12281a;
+  --light: #f4faf5;
+  --muted: #5d6a60;
+  --white: #ffffff;
+  --shadow: 0 12px 30px rgba(18, 40, 26, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--white);
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.site-header {
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid rgba(18, 40, 26, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  min-height: 90px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--dark);
+  font-weight: 700;
+}
+
+.brand img {
+  width: 46px;
+  height: 46px;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: var(--dark);
+  font-weight: 600;
+}
+
+.main-nav a.active,
+.main-nav a:hover {
+  color: var(--green);
+}
+
+.nav-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--green);
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 999px;
+  padding: 12px 18px;
+  font-weight: 700;
+  box-shadow: var(--shadow);
+}
+
+.page-hero {
+  background: linear-gradient(135deg, rgba(31, 163, 71, 0.18), rgba(18, 40, 26, 0.1)),
+    url("https://images.unsplash.com/photo-1507692049790-de58290a4334?auto=format&fit=crop&w=1400&q=80") center/cover no-repeat;
+  padding: 110px 0;
+}
+
+.hero-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.77rem;
+  font-weight: 700;
+  color: var(--green);
+  margin-bottom: 18px;
+}
+
+.eyebrow.dark {
+  color: var(--dark);
+}
+
+.page-hero h1 {
+  margin: 0;
+  font-size: clamp(2.3rem, 5vw, 4rem);
+  line-height: 1.1;
+  color: var(--white);
+  text-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+  max-width: 740px;
+}
+
+.section {
+  padding: 84px 0;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.2fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.info-panel,
+.contact-form {
+  background: var(--white);
+  border: 1px solid rgba(18, 40, 26, 0.08);
+  box-shadow: var(--shadow);
+  border-radius: 24px;
+  padding: 32px 28px;
+}
+
+.info-panel h2,
+.hours h3 {
+  margin-top: 0;
+}
+
+.info-panel ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  color: var(--muted);
+}
+
+.info-panel li {
+  margin: 10px 0;
+}
+
+.hours {
+  margin-top: 30px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(18, 40, 26, 0.08);
+}
+
+.contact-form {
+  display: grid;
+  gap: 20px;
+}
+
+.contact-form label {
+  display: grid;
+  gap: 8px;
+  font-weight: 700;
+  color: var(--dark);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  border: 1px solid rgba(18, 40, 26, 0.14);
+  border-radius: 12px;
+  padding: 12px 14px;
+  font: inherit;
+  background: #fdfefd;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--green);
+  box-shadow: 0 0 0 4px rgba(31, 163, 71, 0.12);
+}
+
+.contact-form button {
+  border: none;
+  border-radius: 999px;
+  background: var(--green);
+  color: var(--white);
+  padding: 14px 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.site-footer {
+  background: var(--dark);
+  color: rgba(255, 255, 255, 0.8);
+  padding: 22px 0;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 900px) {
+  .nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 16px 0;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .main-nav {
+    justify-content: center;
+  }
+
+  .site-footer {
+    text-align: center;
+  }
+
+  .footer-inner {
+    justify-content: center;
+  }
+}

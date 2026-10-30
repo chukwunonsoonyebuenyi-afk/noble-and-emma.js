@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="title desc">
+  <title id="title">Adventist Church Logo</title>
+  <desc id="desc">A green circular emblem with a white cross.</desc>
+  <circle cx="60" cy="60" r="56" fill="#1fa347"/>
+  <circle cx="60" cy="60" r="48" fill="#ffffff" opacity="0.12"/>
+  <rect x="54" y="24" width="12" height="72" rx="4" fill="#ffffff"/>
+  <rect x="24" y="54" width="72" height="12" rx="4" fill="#ffffff"/>
+  <path d="M26 94C39 82 47 76 60 76C73 76 81 82 94 94" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round"/>
+</svg>

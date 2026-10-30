@@ -1,11 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | Seventh-day Adventist Church Maryland</title>
+    <link rel="stylesheet" href="home.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="home.html">
+          <img src="logo.svg" alt="Church logo" />
+          <span>Seventh-day Adventist Church Maryland</span>
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a class="active" href="home.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="ministries.html">Ministries</a>
+          <a href="resources.html">Adventist Resources</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <div class="account-actions">
+          <button class="login-btn" type="button" data-auth-open="login">Log in</button>
+          <button class="signup-btn" type="button" data-auth-open="signup">Sign up</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-slideshow" aria-hidden="true">
+          <img class="hero-slide is-active" src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&amp;fit=crop&amp;w=1800&amp;q=85" alt="" />
+          <img class="hero-slide" src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&amp;fit=crop&amp;w=1800&amp;q=85" alt="" />
+        </div>
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow">Grounded in the Bible</p>
+            <h1>Focused on the mission of Christ.</h1>
+            <p class="hero-text">
+              We are a church family committed to Christ-centered worship, faithful biblical teaching, and a
+              mission to share hope, healing, and the gospel with every community we serve.
+            </p>
+            <div class="hero-actions">
+              <a class="secondary-btn" href="about.html">Learn More</a>
+            </div>
+          </div>
+
+          <div class="hero-card">
+            <h3>Upcoming Service</h3>
+            <p class="service-time">Saturday • 9:30 AM</p>
+            <ul>
+              <li>Prayer & Worship</li>
+              <li>Children’s Sabbath School</li>
+              <li>Community Fellowship</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section intro">
+        <div class="container">
+          <p class="eyebrow dark">Who we are</p>
+          <div class="intro-grid">
+            <div>
+              <h2>Grounded in the Bible. Focused on the mission.</h2>
+            </div>
+            <div>
+              <p>
+                We are a vibrant Christian community rooted in the love of Jesus and the Seventh-day Adventist
+                tradition. Through prayer, biblical teaching, and service, we help people grow in faith and live out
+                the mission of sharing God's love with the world.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt-bg">
+        <div class="container">
+          <p class="eyebrow dark">Our focus</p>
+          <div class="feature-grid">
+            <article class="feature-card">
+              <h3>Worship</h3>
+              <p>Spirit-filled and Bible-centered worship every Sabbath.</p>
+            </article>
+            <article class="feature-card">
+              <h3>Discipleship</h3>
+              <p>Guided Bible study and spiritual growth for every age.</p>
+            </article>
+            <article class="feature-card">
+              <h3>Service</h3>
+              <p>Practical outreach and compassion for families and neighbors.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section event-section">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow dark">Stay connected</p>
+            <h2>Events and opportunities</h2>
+          </div>
+          <div class="event-grid">
+            <article class="event-card">
+              <span class="event-date">Nov 02</span>
+              <h3>Youth Night</h3>
+              <p>Fellowship, music, prayer, and fun for teens and young adults.</p>
+            </article>
+            <article class="event-card">
+              <span class="event-date">Nov 09</span>
+              <h3>Community Health Fair</h3>
+              <p>Wellness screenings, healthy living tips, and local resources.</p>
+            </article>
+            <article class="event-card">
+              <span class="event-date">Nov 15</span>
+              <h3>Food Drive</h3>
+              <p>Join us as we serve families and support outreach efforts.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© 2026 Seventh-day Adventist Church Maryland</p>
+        <p>Worshiping together • Serving together • Growing together</p>
+      </div>
+    </footer>
+
+    <dialog class="auth-dialog" id="auth-dialog" aria-labelledby="auth-title">
+      <div class="auth-panel">
+        <div class="auth-heading">
+          <div>
+            <p class="eyebrow dark">Member access</p>
+            <h2 id="auth-title">Log in</h2>
+          </div>
+          <button class="auth-close" id="auth-close" type="button" aria-label="Close dialog">&times;</button>
+        </div>
+
+        <div class="auth-toggle" role="group" aria-label="Choose an account action">
+          <button class="auth-tab" type="button" data-auth-mode="login" aria-pressed="true">Log in</button>
+          <button class="auth-tab" type="button" data-auth-mode="signup" aria-pressed="false">Sign up</button>
+        </div>
+
+        <form class="auth-form" id="auth-form" autocomplete="off">
+          <label class="auth-field" id="name-field" hidden>
+            Name
+            <input id="auth-name" name="name" type="text" autocomplete="name" />
+          </label>
+          <label class="auth-field">
+            Email
+            <input id="auth-email" name="email" type="email" autocomplete="email" required />
+          </label>
+          <label class="auth-field">
+            Password
+            <input id="auth-password" name="password" type="password" autocomplete="current-password" minlength="8" required />
+          </label>
+          <p class="auth-status" id="auth-status" role="status" hidden></p>
+          <button class="auth-submit" id="auth-submit" type="submit">Log in</button>
+        </form>
+
+        <p class="auth-disclaimer">Account access is not connected yet. This preview does not send or save your details.</p>
+      </div>
+    </dialog>
+
+    <script>
+      const authDialog = document.getElementById("auth-dialog");
+      const authForm = document.getElementById("auth-form");
+      const authTitle = document.getElementById("auth-title");
+      const nameField = document.getElementById("name-field");
+      const nameInput = document.getElementById("auth-name");
+      const emailInput = document.getElementById("auth-email");
+      const passwordInput = document.getElementById("auth-password");
+      const authStatus = document.getElementById("auth-status");
+      const authSubmit = document.getElementById("auth-submit");
+      let authMode = "login";
+
+      function clearCredentials() {
+        nameInput.value = "";
+        emailInput.value = "";
+        passwordInput.value = "";
+      }
+
+      function setAuthMode(mode) {
+        authMode = mode;
+        const signingUp = mode === "signup";
+        nameField.hidden = !signingUp;
+        nameInput.required = signingUp;
+        passwordInput.autocomplete = signingUp ? "new-password" : "current-password";
+        authTitle.textContent = signingUp ? "Create your account" : "Log in";
+        authSubmit.textContent = signingUp ? "Create account" : "Log in";
+        authStatus.hidden = true;
+        authStatus.textContent = "";
+
+        document.querySelectorAll("[data-auth-mode]").forEach((tab) => {
+          tab.setAttribute("aria-pressed", String(tab.dataset.authMode === mode));
+        });
+      }
+
+      document.querySelectorAll("[data-auth-open]").forEach((button) => {
+        button.addEventListener("click", () => {
+          setAuthMode(button.dataset.authOpen);
+          authDialog.showModal();
+          emailInput.focus();
+        });
+      });
+
+      document.querySelectorAll("[data-auth-mode]").forEach((tab) => {
+        tab.addEventListener("click", () => setAuthMode(tab.dataset.authMode));
+      });
+
+      document.getElementById("auth-close").addEventListener("click", () => authDialog.close());
+      authDialog.addEventListener("close", clearCredentials);
+      authDialog.addEventListener("click", (event) => {
+        if (event.target === authDialog) authDialog.close();
+      });
+
+      authForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        authStatus.textContent = authMode === "signup"
+          ? "Account creation is not connected yet. Your details were not sent or saved."
+          : "Log in is not connected yet. Your details were not sent or saved.";
+        authStatus.hidden = false;
+        clearCredentials();
+      });
+
+      const heroSlides = Array.from(document.querySelectorAll(".hero-slide"));
+      const heroImageSources = [
+        "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=1800&q=85",
+        "https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=1800&q=85",
+        "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1800&q=85",
+        "https://images.unsplash.com/photo-1507692049790-de58290a4334?auto=format&fit=crop&w=1800&q=85"
+      ];
+
+      if (heroSlides.length === 2 && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        let activeHeroSlideIndex = 0;
+        let nextHeroImageIndex = 2;
+
+        function changeHeroSlide() {
+          const incomingSlide = heroSlides[1 - activeHeroSlideIndex];
+          const outgoingSlide = heroSlides[activeHeroSlideIndex];
+
+          incomingSlide.onload = () => {
+            incomingSlide.onload = null;
+            incomingSlide.classList.add("is-active");
+            outgoingSlide.classList.remove("is-active");
+            activeHeroSlideIndex = 1 - activeHeroSlideIndex;
+            nextHeroImageIndex = (nextHeroImageIndex + 1) % heroImageSources.length;
+            window.setTimeout(changeHeroSlide, 6500);
+          };
+
+          incomingSlide.onerror = () => {
+            incomingSlide.onerror = null;
+            window.setTimeout(changeHeroSlide, 6500);
+          };
+
+          incomingSlide.src = heroImageSources[nextHeroImageIndex];
+        }
+
+        window.setTimeout(changeHeroSlide, 6500);
+      }
+    </script>
+  </body>
 </html>
