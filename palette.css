@@ -1,0 +1,341 @@
+:root {
+  --green: #167a3a;
+  --dark: #070907;
+  --light: #111713;
+  --muted: #b6c0b9;
+  --white: #ffffff;
+  --shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  --dark-particles: radial-gradient(circle, rgba(100, 230, 145, 0.34) 1px, transparent 1.6px), radial-gradient(circle, rgba(255, 255, 255, 0.22) 0.8px, transparent 1.5px);
+  --light-particles: radial-gradient(circle, rgba(22, 122, 58, 0.24) 1px, transparent 1.6px), radial-gradient(circle, rgba(8, 11, 9, 0.14) 0.8px, transparent 1.5px);
+}
+
+body {
+  background-color: var(--dark);
+  background-image: var(--dark-particles);
+  background-size: 42px 42px, 67px 67px;
+  background-position: 0 0, 19px 24px;
+  background-attachment: fixed;
+  color: var(--white);
+}
+
+.site-header {
+  background-color: rgba(7, 9, 7, 0.98);
+  background-image: var(--dark-particles);
+  background-size: 42px 42px, 67px 67px;
+  background-position: 0 0, 19px 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  min-height: 90px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--white);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.brand img {
+  width: 46px;
+  height: 46px;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+.main-nav a {
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.main-nav a.active,
+.main-nav a:hover {
+  color: #78e69a;
+}
+
+.nav-btn,
+.primary-btn,
+.contact-form button,
+.account-actions .signup-btn,
+.auth-submit {
+  background: var(--green);
+}
+
+.page-hero {
+  position: relative;
+  isolation: isolate;
+}
+
+.page-hero::before {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(7, 9, 7, 0.9), rgba(14, 69, 34, 0.68));
+  content: "";
+  pointer-events: none;
+}
+
+.page-hero::after {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background-image: var(--dark-particles);
+  background-size: 42px 42px, 67px 67px;
+  background-position: 0 0, 19px 24px;
+  content: "";
+  opacity: 0.75;
+  pointer-events: none;
+}
+
+.page-hero > .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero::before {
+  background: linear-gradient(135deg, rgba(7, 9, 7, 0.9), rgba(14, 69, 34, 0.64));
+}
+
+.hero::after {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  background-image: var(--dark-particles);
+  background-size: 42px 42px, 67px 67px;
+  background-position: 0 0, 19px 24px;
+  content: "";
+  opacity: 0.75;
+  pointer-events: none;
+}
+
+.hero-inner {
+  z-index: 3;
+}
+
+.hero-card,
+.team-card,
+.info-panel,
+.feature-card,
+.event-card,
+.value-card,
+.highlight-box,
+.ministry-card,
+.resource-card,
+.contact-form {
+  background-color: var(--dark);
+  background-image: var(--dark-particles);
+  background-size: 42px 42px, 67px 67px;
+  background-position: 0 0, 19px 24px;
+  border-color: rgba(255, 255, 255, 0.14);
+  color: var(--white);
+}
+
+.hero-card h3,
+.team-card h3,
+.info-panel h2,
+.info-panel .hours h3,
+.feature-card h3,
+.event-card h3,
+.value-card h3,
+.ministry-card h3,
+.resource-card h3,
+.highlight-box h2 {
+  color: var(--white);
+}
+
+.hero-card ul,
+.team-card p,
+.info-panel ul,
+.feature-card p,
+.event-card p,
+.value-card p,
+.ministry-card p,
+.resource-card p {
+  color: var(--muted);
+}
+
+.contact-form label {
+  display: flex;
+  flex-direction: column;
+  color: var(--white);
+}
+
+.contact-form input,
+.contact-form textarea,
+.auth-field input {
+  background: #ffffff;
+  color: #080b09;
+}
+
+.eyebrow.dark {
+  color: #78e69a;
+}
+
+.eyebrow:not(.dark) {
+  color: #a4f0ba;
+}
+
+.resource-link {
+  color: #78e69a;
+}
+
+.event-date {
+  background: var(--green);
+  color: var(--white);
+}
+
+.hours {
+  border-color: rgba(255, 255, 255, 0.16);
+}
+
+.ministry-card,
+.resource-card {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-top: 3px solid var(--green);
+}
+
+.icon,
+.resource-icon {
+  background: linear-gradient(135deg, #167a3a, #070907);
+}
+
+.video-slot {
+  border-color: rgba(255, 255, 255, 0.3);
+  background: linear-gradient(135deg, rgba(22, 122, 58, 0.28), rgba(7, 9, 7, 0.6));
+  color: var(--white);
+}
+
+.site-footer {
+  background-color: #050706;
+  background-image: var(--dark-particles);
+  background-size: 42px 42px, 67px 67px;
+  background-position: 0 0, 19px 24px;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.alt-bg {
+  background-color: var(--light);
+  background-image: var(--light-particles);
+  background-size: 42px 42px, 67px 67px;
+  background-position: 0 0, 19px 24px;
+}
+
+body,
+.site-header,
+.site-footer,
+.alt-bg,
+.page-hero::after,
+.hero::after,
+.hero-card,
+.team-card,
+.info-panel,
+.feature-card,
+.event-card,
+.value-card,
+.highlight-box,
+.ministry-card,
+.resource-card,
+.contact-form {
+  animation: particle-drift 24s linear infinite;
+}
+
+@keyframes particle-drift {
+  to {
+    background-position: 42px 42px, 86px 91px;
+  }
+}
+
+.auth-dialog {
+  background-color: #0c110e;
+  color: var(--white);
+}
+
+.auth-heading h2,
+.auth-field {
+  color: var(--white);
+}
+
+.auth-toggle {
+  background: #18201a;
+}
+
+.auth-tab[aria-pressed="true"] {
+  background: var(--green);
+  color: var(--white);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body,
+  .site-header,
+  .site-footer,
+  .alt-bg,
+  .page-hero::after,
+  .hero::after,
+  .hero-card,
+  .team-card,
+  .info-panel,
+  .feature-card,
+  .event-card,
+  .value-card,
+  .highlight-box,
+  .ministry-card,
+  .resource-card,
+  .contact-form {
+    animation: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 16px 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .main-nav {
+    justify-content: center;
+  }
+
+  .site-footer {
+    text-align: center;
+  }
+
+  .footer-inner {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 900px) {
+  .nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 16px 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .main-nav {
+    justify-content: center;
+  }
+
+  .site-footer {
+    text-align: center;
+  }
+
+  .footer-inner {
+    justify-content: center;
+  }
+}

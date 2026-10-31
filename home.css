@@ -1,10 +1,10 @@
 :root {
-  --green: #1fa347;
-  --dark: #12281a;
-  --light: #f5faf6;
-  --muted: #5d6a60;
+  --green: #167a3a;
+  --dark: #080b09;
+  --light: #f2f4f2;
+  --muted: #58615b;
   --white: #ffffff;
-  --shadow: 0 12px 30px rgba(18, 40, 26, 0.08);
+  --shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
 }
 
 * {
@@ -30,8 +30,8 @@ img {
 }
 
 .site-header {
-  background: rgba(255, 255, 255, 0.96);
-  border-bottom: 1px solid rgba(18, 40, 26, 0.08);
+  background: rgba(8, 11, 9, 0.97);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   position: sticky;
   top: 0;
   z-index: 20;
@@ -50,7 +50,7 @@ img {
   align-items: center;
   gap: 12px;
   text-decoration: none;
-  color: var(--dark);
+  color: var(--white);
   font-weight: 700;
 }
 
@@ -68,13 +68,13 @@ img {
 
 .main-nav a {
   text-decoration: none;
-  color: var(--dark);
+  color: rgba(255, 255, 255, 0.86);
   font-weight: 600;
 }
 
 .main-nav a.active,
 .main-nav a:hover {
-  color: var(--green);
+  color: #62d987;
 }
 
 .account-actions {
@@ -92,7 +92,6 @@ img {
   font-weight: 700;
   cursor: pointer;
 }
-
 .login-btn {
   border: 1px solid var(--green);
   background: var(--white);
